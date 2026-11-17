@@ -1,0 +1,8 @@
+flashcart:
+  rate-limit:
+    ip:
+      capacity: 1000000        # effectively unlimited, but the limiter still runs,
+      refill-per-second: 1000000   # so its Redis cost stays in the numbers
+logging:
+  level:
+    root: WARN                 # console logging at 1000 req/s skews the results
